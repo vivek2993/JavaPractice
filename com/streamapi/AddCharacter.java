@@ -18,14 +18,9 @@ public class AddCharacter {
 		normalway(str);
 	}
 	public static void usingStreamAPI(String str) {
-		 List<Character> charList = str.chars()
-                 .mapToObj(c -> (char) c)
-                 .collect(Collectors.toList());
-				
-		
-		 
-	     String result = IntStream.range(0, charList.size())
-                 .mapToObj(i -> (i > 0 && i % 10 == 0) ? "_" + charList.get(i) : charList.get(i).toString())
+	 
+	     String result = IntStream.range(0, str.length())
+                 .mapToObj(i -> (i > 0 && i % 10 == 0) ? "_" + str.charAt(i) : str.charAt(i)+"")
                  .collect(Collectors.joining());
 	     System.out.println(result);
 		

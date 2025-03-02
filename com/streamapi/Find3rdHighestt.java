@@ -18,7 +18,7 @@ public class Find3rdHighestt {
 		Employee e5=new Employee(5,"kajal");
 		Employee e6=new Employee(6,"shikha");
 		
-		Arrays.asList(e1,e2,e3,e4,e5,e6).stream().sorted(Comparator.reverseOrder()).skip(2).findFirst().ifPresent(System.out::println);
+		Arrays.asList(e1,e2,e3,e4,e5,e6).stream().map(e->e.getId()).sorted(Comparator.reverseOrder()).skip(2).findFirst().ifPresent(System.out::println);
 		
 	}
 }

@@ -1,5 +1,7 @@
 package com.designpattern.factory;
 
+/*FACTORY DESIGN PATTERN are used when all the object creation and business logic we need to keep at one place*/
+ 
 public class FactoryClass {
 
 	
@@ -17,7 +19,7 @@ public class FactoryClass {
 	}
 	
 	public static void main(String[] args) {
-		Employee employee = FactoryClass.getEmployee("WebDeveloper");
+		  Employee employee = FactoryClass.getEmployee("WebDeveloper");
 		
 		System.out.println(employee.salary());
 	}
